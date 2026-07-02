@@ -1,0 +1,198 @@
+{
+  "common": {
+    "appName": "Hopélà!",
+    "tagline": "La liste de cadeaux que vos proches vont adorer utiliser",
+    "footer": "© {year} Hopélà! — fait avec soin",
+    "copy": "Copier",
+    "copied": "Lien copié !",
+    "cancel": "Annuler"
+  },
+  "nav": {
+    "brand": "Hopélà!",
+    "login": "Se connecter",
+    "dashboard": "Mes listes",
+    "language": "Langue",
+    "locales": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Naissance · Mariage · Anniversaire",
+      "title": "Des cadeaux bien organisés, des surprises préservées",
+      "subtitle": "Créez votre liste en collant des liens produits, partagez-la, et laissez vos proches réserver — sans doublons, sans spoiler.",
+      "cta": "Créer ma liste",
+      "secondaryCta": "Comment ça marche"
+    },
+    "how": {
+      "title": "Comment ça marche",
+      "create": {
+        "title": "Créez votre liste",
+        "description": "Collez un lien produit : titre, photo et prix se remplissent tout seuls. Tout reste modifiable."
+      },
+      "share": {
+        "title": "Partagez le lien",
+        "description": "Un lien public unique. Vos proches n'ont pas besoin de compte pour consulter la liste."
+      },
+      "reserve": {
+        "title": "Ils réservent",
+        "description": "Un nom, un email, c'est réservé. Chacun peut annuler sa réservation à tout moment."
+      }
+    },
+    "antiSpoil": {
+      "title": "Anti-spoil par défaut",
+      "description": "Vous ne voyez jamais qui a réservé quoi : la surprise reste entière le jour J. Et si vous préférez tout savoir, un simple interrupteur suffit.",
+      "cta": "Commencer gratuitement"
+    }
+  },
+  "login": {
+    "title": "Connexion",
+    "description": "Recevez un lien magique par email — pas de mot de passe.",
+    "emailLabel": "Votre email",
+    "emailPlaceholder": "camille@exemple.fr",
+    "submit": "Recevoir le lien magique",
+    "error": "Impossible d'envoyer le lien. Vérifiez l'adresse et réessayez.",
+    "sent": {
+      "title": "Vérifiez votre boîte mail",
+      "description": "Nous venons de vous envoyer un lien de connexion. Il est valable quelques minutes."
+    }
+  },
+  "dashboard": {
+    "title": "Mes listes",
+    "newList": "Nouvelle liste",
+    "account": "Compte",
+    "signOut": "Se déconnecter",
+    "manage": "Gérer",
+    "copyLink": "Copier le lien",
+    "spoilOff": "anti-spoil désactivé",
+    "giftsCount": "{count, plural, =0 {Aucun cadeau} one {# cadeau} other {# cadeaux}}",
+    "empty": {
+      "title": "Créez votre première liste",
+      "description": "Naissance, mariage, anniversaire… tout commence par une liste.",
+      "cta": "Créer une liste"
+    }
+  },
+  "listForm": {
+    "createTitle": "Nouvelle liste",
+    "createDescription": "Donnez un titre à votre liste — le reste peut attendre.",
+    "titleLabel": "Titre",
+    "titlePlaceholder": "Liste de naissance de Léo",
+    "emojiLabel": "Emoji",
+    "descriptionLabel": "Description",
+    "eventDateLabel": "Date de l'événement",
+    "coverLabel": "Couverture",
+    "coverNone": "Aucune",
+    "antiSpoilLabel": "Mode anti-spoil",
+    "antiSpoilHint": "Les cadeaux réservés restent une surprise pour vous et sont masqués pour les autres invités.",
+    "submitCreate": "Créer la liste",
+    "error": "Une erreur est survenue. Vérifiez les champs et réessayez."
+  },
+  "listEditor": {
+    "back": "Mes listes",
+    "shareTitle": "Partager la liste",
+    "shareDescription": "Toute personne disposant de ce lien peut consulter la liste et réserver — sans compte.",
+    "viewPublic": "Voir la page publique",
+    "giftsTitle": "{count, plural, =0 {Cadeaux} one {# cadeau} other {# cadeaux}}",
+    "addGiftTitle": "Ajouter un cadeau",
+    "addGift": "Ajouter",
+    "settingsTitle": "Réglages de la liste",
+    "saveChanges": "Enregistrer",
+    "dangerTitle": "Zone dangereuse",
+    "dangerDescription": "Supprimer la liste efface aussi ses cadeaux et leurs réservations.",
+    "deleteList": "Supprimer la liste",
+    "deleteConfirmTitle": "Supprimer cette liste ?",
+    "deleteConfirmDescription": "« {title} » et toutes ses données seront définitivement supprimées."
+  },
+  "giftForm": {
+    "urlLabel": "Lien du produit",
+    "urlPlaceholder": "https://boutique.exemple/produit",
+    "prefill": "Pré-remplir",
+    "prefillSuccess": "Fiche remplie depuis le lien !",
+    "prefillPartial": "Lien lu partiellement — complétez les champs manquants.",
+    "prefillError": "Impossible de lire ce lien. Remplissez la fiche à la main.",
+    "titleLabel": "Titre",
+    "descriptionLabel": "Description",
+    "priceLabel": "Prix estimé",
+    "currencyLabel": "Devise",
+    "imageLabel": "Image (URL)",
+    "topPriorityLabel": "Coup de cœur",
+    "added": "Cadeau ajouté !",
+    "updated": "Cadeau mis à jour !",
+    "error": "Une erreur est survenue. Vérifiez les champs et réessayez."
+  },
+  "giftRow": {
+    "topPriority": "Coup de cœur",
+    "reserved": "Réservé",
+    "available": "Disponible",
+    "edit": "Modifier",
+    "editTitle": "Modifier le cadeau",
+    "saveChanges": "Enregistrer",
+    "delete": "Supprimer",
+    "deleteConfirmTitle": "Supprimer ce cadeau ?",
+    "deleteConfirmDescription": "« {title} » sera retiré de la liste, ainsi que son éventuelle réservation."
+  },
+  "publicList": {
+    "metaDescription": "Une liste de cadeaux à partager, sans doublons ni surprises gâchées.",
+    "topPriority": "Coup de cœur",
+    "reserved": "Réservé",
+    "reservedBy": "Réservé par {name}",
+    "openLink": "Voir le produit",
+    "antiSpoilNote": "Propulsé par Hopélà! — réservez un cadeau, la surprise reste entière.",
+    "empty": {
+      "title": "Rien à voir ici… pour l'instant",
+      "description": "Tous les cadeaux sont déjà réservés, ou la liste est encore vide. Repassez plus tard !"
+    }
+  },
+  "reserve": {
+    "cta": "Réserver",
+    "title": "Réserver « {gift} »",
+    "description": "Indiquez qui vous êtes : vous recevrez une confirmation par email avec un lien d'annulation.",
+    "nameLabel": "Votre nom",
+    "emailLabel": "Votre email",
+    "emailHint": "Utilisé uniquement pour la confirmation et l'annulation. Jamais montré aux autres.",
+    "submit": "Confirmer la réservation",
+    "close": "Fermer",
+    "error": "Une erreur est survenue. Réessayez.",
+    "alreadyReserved": {
+      "title": "Trop tard !",
+      "description": "Quelqu'un vient de réserver ce cadeau. Rechargez la page pour voir la liste à jour."
+    },
+    "success": {
+      "title": "C'est réservé ! 🎉",
+      "description": "Vérifiez votre boîte mail : la confirmation contient un lien pour annuler si besoin."
+    }
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "description": "Cette page n'existe pas ou n'existe plus.",
+    "backHome": "Retour à l'accueil"
+  },
+  "cancelPage": {
+    "title": "Annuler ma réservation",
+    "description": "Vous êtes sur le point de libérer « {gift} » de la liste « {list} ».",
+    "confirm": "Oui, annuler ma réservation",
+    "backHome": "Retour à l'accueil",
+    "invalid": {
+      "title": "Lien invalide",
+      "description": "Cette réservation n'existe plus — peut-être déjà annulée."
+    },
+    "done": {
+      "title": "Réservation annulée",
+      "description": "Le cadeau est de nouveau disponible pour les autres invités."
+    }
+  },
+  "emails": {
+    "reservationConfirmed": {
+      "subject": "Réservation confirmée — {giftTitle}",
+      "preview": "Votre réservation de « {giftTitle} » est confirmée.",
+      "heading": "Réservation confirmée 🎁",
+      "greeting": "Bonjour {name},",
+      "body": "Vous avez réservé « {giftTitle} » sur la liste « {listTitle} ». Le cadeau est désormais marqué comme réservé pour les autres invités.",
+      "viewList": "Voir la liste",
+      "cancelIntro": "Un imprévu ? Vous pouvez annuler votre réservation à tout moment — ce lien n'expire jamais :",
+      "cancelLink": "Annuler ma réservation",
+      "footer": "Vous recevez cet email car cette adresse a été utilisée pour réserver un cadeau sur Hopélà!."
+    }
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "common": {
+    "appName": "Hopélà!",
+    "tagline": "The gift list your loved ones will actually enjoy using",
+    "footer": "© {year} Hopélà! — made with care",
+    "copy": "Copy",
+    "copied": "Link copied!",
+    "cancel": "Cancel"
+  },
+  "nav": {
+    "brand": "Hopélà!",
+    "login": "Sign in",
+    "dashboard": "My lists",
+    "language": "Language",
+    "locales": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "home": {
+    "hero": {
+      "badge": "Baby shower · Wedding · Birthday",
+      "title": "Well-organized gifts, surprises kept intact",
+      "subtitle": "Build your list by pasting product links, share it, and let friends and family reserve — no duplicates, no spoilers.",
+      "cta": "Create my list",
+      "secondaryCta": "How it works"
+    },
+    "how": {
+      "title": "How it works",
+      "create": {
+        "title": "Create your list",
+        "description": "Paste a product link: title, photo and price fill in automatically. Everything stays editable."
+      },
+      "share": {
+        "title": "Share the link",
+        "description": "One public link. Your loved ones don't need an account to browse the list."
+      },
+      "reserve": {
+        "title": "They reserve",
+        "description": "A name, an email, done. Anyone can cancel their own reservation at any time."
+      }
+    },
+    "antiSpoil": {
+      "title": "Anti-spoil by default",
+      "description": "You never see who reserved what: the surprise stays intact until the big day. Prefer full visibility? One switch away.",
+      "cta": "Start for free"
+    }
+  },
+  "login": {
+    "title": "Sign in",
+    "description": "Get a magic link by email — no password needed.",
+    "emailLabel": "Your email",
+    "emailPlaceholder": "camille@example.com",
+    "submit": "Send me a magic link",
+    "error": "We couldn't send the link. Check the address and try again.",
+    "sent": {
+      "title": "Check your inbox",
+      "description": "We just sent you a sign-in link. It's valid for a few minutes."
+    }
+  },
+  "dashboard": {
+    "title": "My lists",
+    "newList": "New list",
+    "account": "Account",
+    "signOut": "Sign out",
+    "manage": "Manage",
+    "copyLink": "Copy link",
+    "spoilOff": "anti-spoil off",
+    "giftsCount": "{count, plural, =0 {No gifts yet} one {# gift} other {# gifts}}",
+    "empty": {
+      "title": "Create your first list",
+      "description": "Baby shower, wedding, birthday… it all starts with a list.",
+      "cta": "Create a list"
+    }
+  },
+  "listForm": {
+    "createTitle": "New list",
+    "createDescription": "Give your list a title — everything else can wait.",
+    "titleLabel": "Title",
+    "titlePlaceholder": "Leo's baby shower list",
+    "emojiLabel": "Emoji",
+    "descriptionLabel": "Description",
+    "eventDateLabel": "Event date",
+    "coverLabel": "Cover",
+    "coverNone": "None",
+    "antiSpoilLabel": "Anti-spoil mode",
+    "antiSpoilHint": "Reserved gifts stay a surprise for you and are hidden from other guests.",
+    "submitCreate": "Create list",
+    "error": "Something went wrong. Check the fields and try again."
+  },
+  "listEditor": {
+    "back": "My lists",
+    "shareTitle": "Share the list",
+    "shareDescription": "Anyone with this link can browse the list and reserve — no account needed.",
+    "viewPublic": "View public page",
+    "giftsTitle": "{count, plural, =0 {Gifts} one {# gift} other {# gifts}}",
+    "addGiftTitle": "Add a gift",
+    "addGift": "Add",
+    "settingsTitle": "List settings",
+    "saveChanges": "Save",
+    "dangerTitle": "Danger zone",
+    "dangerDescription": "Deleting the list also removes its gifts and their reservations.",
+    "deleteList": "Delete list",
+    "deleteConfirmTitle": "Delete this list?",
+    "deleteConfirmDescription": "“{title}” and all its data will be permanently deleted."
+  },
+  "giftForm": {
+    "urlLabel": "Product link",
+    "urlPlaceholder": "https://shop.example/product",
+    "prefill": "Prefill",
+    "prefillSuccess": "Filled in from the link!",
+    "prefillPartial": "Partial read — complete the missing fields.",
+    "prefillError": "Couldn't read this link. Fill in the details manually.",
+    "titleLabel": "Title",
+    "descriptionLabel": "Description",
+    "priceLabel": "Estimated price",
+    "currencyLabel": "Currency",
+    "imageLabel": "Image (URL)",
+    "topPriorityLabel": "Top pick",
+    "added": "Gift added!",
+    "updated": "Gift updated!",
+    "error": "Something went wrong. Check the fields and try again."
+  },
+  "giftRow": {
+    "topPriority": "Top pick",
+    "reserved": "Reserved",
+    "available": "Available",
+    "edit": "Edit",
+    "editTitle": "Edit gift",
+    "saveChanges": "Save",
+    "delete": "Delete",
+    "deleteConfirmTitle": "Delete this gift?",
+    "deleteConfirmDescription": "“{title}” will be removed from the list, along with any reservation."
+  },
+  "publicList": {
+    "metaDescription": "A gift list to share — no duplicates, no spoiled surprises.",
+    "topPriority": "Top pick",
+    "reserved": "Reserved",
+    "reservedBy": "Reserved by {name}",
+    "openLink": "View product",
+    "antiSpoilNote": "Powered by Hopélà! — reserve a gift, the surprise stays intact.",
+    "empty": {
+      "title": "Nothing to see here… yet",
+      "description": "All gifts are already reserved, or the list is still empty. Come back later!"
+    }
+  },
+  "reserve": {
+    "cta": "Reserve",
+    "title": "Reserve “{gift}”",
+    "description": "Tell us who you are: you'll receive an email confirmation with a cancellation link.",
+    "nameLabel": "Your name",
+    "emailLabel": "Your email",
+    "emailHint": "Only used for confirmation and cancellation. Never shown to anyone.",
+    "submit": "Confirm reservation",
+    "close": "Close",
+    "error": "Something went wrong. Please try again.",
+    "alreadyReserved": {
+      "title": "Too late!",
+      "description": "Someone just reserved this gift. Reload the page to see the updated list."
+    },
+    "success": {
+      "title": "Reserved! 🎉",
+      "description": "Check your inbox: the confirmation includes a link to cancel if needed."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "This page doesn't exist, or no longer does.",
+    "backHome": "Back to home"
+  },
+  "cancelPage": {
+    "title": "Cancel my reservation",
+    "description": "You're about to release “{gift}” from the list “{list}”.",
+    "confirm": "Yes, cancel my reservation",
+    "backHome": "Back to home",
+    "invalid": {
+      "title": "Invalid link",
+      "description": "This reservation no longer exists — it may already be cancelled."
+    },
+    "done": {
+      "title": "Reservation cancelled",
+      "description": "The gift is available again for other guests."
+    }
+  },
+  "emails": {
+    "reservationConfirmed": {
+      "subject": "Reservation confirmed — {giftTitle}",
+      "preview": "Your reservation of “{giftTitle}” is confirmed.",
+      "heading": "Reservation confirmed 🎁",
+      "greeting": "Hi {name},",
+      "body": "You reserved “{giftTitle}” from the list “{listTitle}”. The gift is now marked as reserved for other guests.",
+      "viewList": "View the list",
+      "cancelIntro": "Change of plans? You can cancel your reservation at any time — this link never expires:",
+      "cancelLink": "Cancel my reservation",
+      "footer": "You're receiving this email because this address was used to reserve a gift on Hopélà!."
+    }
+  }
+}
