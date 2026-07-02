@@ -46,6 +46,24 @@ function extractMeta(html: string, property: string): string | null {
   return null;
 }
 
+/**
+ * og:image is often a relative path (e.g. `/img/product.jpg`). Resolve it
+ * against the final response URL so the form receives an absolute http(s) URL.
+ */
+function resolveImageUrl(raw: string, baseUrl: string): string | null {
+  try {
+    const resolved = new URL(raw, baseUrl);
+
+    if (resolved.protocol !== "http:" && resolved.protocol !== "https:") {
+      return null;
+    }
+
+    return resolved.href;
+  } catch {
+    return null;
+  }
+}
+
 function decodeEntities(value: string): string {
   return value
     .replaceAll("&amp;", "&")
@@ -97,7 +115,10 @@ export async function unfurlUrl(rawUrl: string): Promise<UnfurlResult> {
     const description =
       extractMeta(html, "og:description") ??
       extractMeta(html, "description");
-    const imageUrl = extractMeta(html, "og:image");
+    const rawImage = extractMeta(html, "og:image");
+    const imageUrl = rawImage
+      ? resolveImageUrl(rawImage, response.url || url.href)
+      : null;
     const rawPrice =
       extractMeta(html, "product:price:amount") ??
       extractMeta(html, "og:price:amount");

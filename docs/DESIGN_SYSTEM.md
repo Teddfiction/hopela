@@ -42,3 +42,20 @@ _To be completed after the Figma pass. Until then, the preset values in `globals
 | `--muted` / `--muted-foreground` | secondary surfaces/text | from preset |
 | `--destructive` | errors, deletions | from preset |
 | `--radius` | corner radius scale | from preset |
+| `--sidebar-*` | dashboard sidebar surfaces | from preset |
+
+---
+
+## 5. UI patterns (decided 2026-07-02)
+
+Component-level conventions that go beyond tokens. Documented adaptations of Shadcn primitives are allowed ("adapt, don't fork"); anything else follows the golden rules.
+
+| Pattern | Rule |
+|---|---|
+| **Cards** | `rounded-2xl` — adapted directly in `components/ui/card.tsx` so it propagates everywhere. |
+| **Product images** | Always **3:4** (`aspect-[3/4]` + `object-cover`): gift rows, form previews, public gift cards. |
+| **Owner forms in context** | **Dialog**, fullscreen on mobile via the shared classes in `components/hopela/dialog-fullscreen.ts` (add gift, list settings, edit gift). |
+| **Light contextual actions** | **Popover** (e.g. share = URL + copy). AlertDialog is reserved for blocking confirmations. |
+| **Row actions** | Icon buttons (`size="icon-sm"`) with Hugeicons + `sr-only` label (edit = Edit02, delete = Delete02 destructive). |
+| **Dashboard navigation** | Single-column Sidebar, `collapsible="icon"` on desktop: brand header, "Mes listes" group (lists + badges + new-list item), user menu in the footer. Mobile: `SidebarTrigger` (SidebarLeftIcon) opens the Sheet; navigation closes it. No nested/dual sidebars — that pattern breaks in the mobile Sheet. |
+| **Icons** | `@hugeicons/core-free-icons` via `HugeiconsIcon`, `data-icon="inline-start"` when leading a button label. |

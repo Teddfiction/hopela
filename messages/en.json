@@ -86,7 +86,8 @@
     "antiSpoilLabel": "Anti-spoil mode",
     "antiSpoilHint": "Reserved gifts stay a surprise for you and are hidden from other guests.",
     "submitCreate": "Create list",
-    "error": "Something went wrong. Check the fields and try again."
+    "error": "Something went wrong. Check the fields and try again.",
+    "updated": "List updated!"
   },
   "listEditor": {
     "back": "My lists",
@@ -102,7 +103,10 @@
     "dangerDescription": "Deleting the list also removes its gifts and their reservations.",
     "deleteList": "Delete list",
     "deleteConfirmTitle": "Delete this list?",
-    "deleteConfirmDescription": "“{title}” and all its data will be permanently deleted."
+    "deleteConfirmDescription": "“{title}” and all its data will be permanently deleted.",
+    "backToList": "Back to list",
+    "share": "Share",
+    "giftsEmpty": "No gifts yet. Add one to get the list started."
   },
   "giftForm": {
     "urlLabel": "Product link",

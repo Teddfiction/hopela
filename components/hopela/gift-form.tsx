@@ -176,7 +176,7 @@ export function GiftForm({ action, gift, submitLabel, onDone }: GiftFormProps) {
           <img
             src={imageUrl}
             alt=""
-            className="mt-1 h-24 w-24 rounded-2xl object-cover ring-1 ring-border"
+            className="mt-1 aspect-[3/4] w-24 rounded-2xl object-cover ring-1 ring-border"
           />
         )}
       </div>

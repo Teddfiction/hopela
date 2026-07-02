@@ -25,9 +25,10 @@ interface ListFormProps {
   ) => Promise<ListFormState>;
   list?: List;
   submitLabel: string;
+  onDone?: () => void;
 }
 
-export function ListForm({ action, list, submitLabel }: ListFormProps) {
+export function ListForm({ action, list, submitLabel, onDone }: ListFormProps) {
   const t = useTranslations("listForm");
   const [state, formAction] = useActionState(action, initialState);
   const [cover, setCover] = useState<CoverImage | "">(
@@ -38,7 +39,12 @@ export function ListForm({ action, list, submitLabel }: ListFormProps) {
     if (state.status === "error") {
       toast.error(t("error"));
     }
-  }, [state, t]);
+    if (state.status === "updated") {
+      toast.success(t("updated"));
+      onDone?.();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
 
   return (
     <form action={formAction} className="flex flex-col gap-5">

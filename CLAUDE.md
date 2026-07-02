@@ -1,7 +1,7 @@
 # CLAUDE.md — Hopélà!
 
 Operating contract for AI-assisted development on this repo. Read this first, every session.
-Companions: `docs/SPEC.md` (product + architecture) · `docs/DATA_MODEL.md` (schema + RLS) · `docs/DESIGN_SYSTEM.md` (design tokens — updated from Figma).
+Companions: `docs/STATUS.md` (**current state + changelog — read first, update before ending a session**) · `docs/SPEC.md` (product + architecture) · `docs/DATA_MODEL.md` (schema + RLS) · `docs/DESIGN_SYSTEM.md` (design tokens + UI patterns).
 
 ---
 
@@ -66,6 +66,7 @@ Both are equally strict server boundaries once Zod + RLS hold. Never write clien
 - **Migrations:** Supabase CLI, one per change, checked in. Never edit schema via the dashboard. Keep DATA_MODEL.md in sync.
 - **Money:** `numeric(10,2)` + explicit `currency`. Never floats.
 - **Naming:** files/folders kebab-case · components & types PascalCase · DB snake_case · functions/vars camelCase.
+- **Session log:** every working session ends by updating `docs/STATUS.md` (changelog entry + decisions + remaining work). This file is the handoff between Cowork and Claude Code sessions — conversation history does not transfer between tools.
 
 ---
 
@@ -77,6 +78,7 @@ app/
   [locale]/dashboard/          owner area (auth required)
   [locale]/list/[slug]/        public list view + reserve (no login)
   api/                         external/inbound surfaces (API routes)
+hooks/                         shared React hooks (use-mobile, …)
 lib/
   core/                        domain: lists, gifts, reservations (+ actions.ts)
   db/                          Supabase clients (server/browser), queries
@@ -85,7 +87,7 @@ lib/
 components/ui/                 Shadcn primitives (themed)
 components/hopela/             domain components
 messages/                      translation JSON per locale
-docs/                          SPEC, DATA_MODEL, DESIGN_SYSTEM
+docs/                          STATUS, SPEC, DATA_MODEL, DESIGN_SYSTEM
 supabase/migrations/           SQL migrations
 ```
 

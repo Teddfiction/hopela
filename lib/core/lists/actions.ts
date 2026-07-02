@@ -10,7 +10,7 @@ import { createClient } from "@/lib/db/server";
 import { redirect } from "@/lib/i18n/navigation";
 
 export interface ListFormState {
-  status: "idle" | "error";
+  status: "idle" | "updated" | "error";
 }
 
 const UNIQUE_VIOLATION = "23505";
@@ -91,7 +91,7 @@ export async function updateList(
 
   const locale = await getLocale();
   revalidatePath(`/${locale}/dashboard/lists/${idParsed.data}`);
-  return { status: "idle" };
+  return { status: "updated" };
 }
 
 export async function toggleAntiSpoil(

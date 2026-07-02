@@ -1,9 +1,18 @@
 import { getTranslations } from "next-intl/server";
 
-import { LocaleSwitcher } from "@/components/hopela/locale-switcher";
-import { UserMenu } from "@/components/hopela/user-menu";
-import { createClient } from "@/lib/db/server";
+import {
+  SidebarInset,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import {
+  DashboardSidebar,
+  type SidebarListItem,
+} from "@/components/hopela/dashboard-sidebar";
+import { getMyLists } from "@/lib/core/lists/queries";
 import { Link, redirect } from "@/lib/i18n/navigation";
+import { createClient } from "@/lib/db/server";
 
 export default async function DashboardLayout({
   children,
@@ -24,25 +33,33 @@ export default async function DashboardLayout({
     redirect({ href: "/login", locale });
   }
 
+  const lists = await getMyLists();
+  const sidebarLists: SidebarListItem[] = lists.map((list) => ({
+    id: list.id,
+    title: list.title,
+    emoji: list.emoji,
+    giftCount: list.gift[0]?.count ?? 0,
+  }));
+
   return (
-    <div className="flex min-h-dvh flex-col">
-      <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur-sm">
-        <div className="mx-auto flex h-14 w-full max-w-5xl items-center justify-between gap-4 px-4">
-          <Link
-            href="/dashboard"
-            className="cn-font-heading text-lg font-semibold tracking-tight"
-          >
-            {t("brand")}
-          </Link>
-          <div className="flex items-center gap-2">
-            <LocaleSwitcher />
-            <UserMenu email={user!.email ?? ""} />
+    <TooltipProvider>
+      <SidebarProvider>
+        <DashboardSidebar email={user!.email ?? ""} lists={sidebarLists} />
+        <SidebarInset>
+          <header className="sticky top-0 z-40 flex h-14 items-center gap-2 border-b bg-background/80 px-4 backdrop-blur-sm md:hidden">
+            <SidebarTrigger />
+            <Link
+              href="/dashboard"
+              className="cn-font-heading text-lg font-semibold tracking-tight"
+            >
+              {t("brand")}
+            </Link>
+          </header>
+          <div className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
+            {children}
           </div>
-        </div>
-      </header>
-      <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
-        {children}
-      </main>
-    </div>
+        </SidebarInset>
+      </SidebarProvider>
+    </TooltipProvider>
   );
 }

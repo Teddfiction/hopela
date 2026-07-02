@@ -29,7 +29,7 @@ export async function GiftCard({ gift }: { gift: PublicGift }) {
         <img
           src={gift.image_url}
           alt=""
-          className="-mt-(--card-spacing) aspect-[2/1] w-full object-cover"
+          className="-mt-(--card-spacing) aspect-[3/4] w-full object-cover"
         />
       )}
       <CardHeader>

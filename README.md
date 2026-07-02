@@ -8,7 +8,7 @@ An open web app to create and share gift lists — birth, wedding, birthday, any
 
 Next.js 15 (App Router, RSC) · TypeScript strict · Shadcn/ui + Tailwind 4 · Supabase (Postgres + RLS + magic-link auth) · React Email + Resend · next-intl (fr, en) · Vercel.
 
-Project rules and architecture live in [`CLAUDE.md`](./CLAUDE.md), [`docs/SPEC.md`](./docs/SPEC.md), [`docs/DATA_MODEL.md`](./docs/DATA_MODEL.md) and [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md).
+Project rules and architecture live in [`CLAUDE.md`](./CLAUDE.md), [`docs/SPEC.md`](./docs/SPEC.md), [`docs/DATA_MODEL.md`](./docs/DATA_MODEL.md) and [`docs/DESIGN_SYSTEM.md`](./docs/DESIGN_SYSTEM.md). Current state and session changelog: [`docs/STATUS.md`](./docs/STATUS.md).
 
 ## Getting started
 

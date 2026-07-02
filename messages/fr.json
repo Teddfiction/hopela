@@ -86,7 +86,8 @@
     "antiSpoilLabel": "Mode anti-spoil",
     "antiSpoilHint": "Les cadeaux réservés restent une surprise pour vous et sont masqués pour les autres invités.",
     "submitCreate": "Créer la liste",
-    "error": "Une erreur est survenue. Vérifiez les champs et réessayez."
+    "error": "Une erreur est survenue. Vérifiez les champs et réessayez.",
+    "updated": "Liste mise à jour !"
   },
   "listEditor": {
     "back": "Mes listes",
@@ -102,7 +103,10 @@
     "dangerDescription": "Supprimer la liste efface aussi ses cadeaux et leurs réservations.",
     "deleteList": "Supprimer la liste",
     "deleteConfirmTitle": "Supprimer cette liste ?",
-    "deleteConfirmDescription": "« {title} » et toutes ses données seront définitivement supprimées."
+    "deleteConfirmDescription": "« {title} » et toutes ses données seront définitivement supprimées.",
+    "backToList": "Retour à la liste",
+    "share": "Partager",
+    "giftsEmpty": "Aucun cadeau pour l'instant. Ajoutez-en un pour démarrer la liste."
   },
   "giftForm": {
     "urlLabel": "Lien du produit",
