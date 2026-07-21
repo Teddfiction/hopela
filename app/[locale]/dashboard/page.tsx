@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getFormatter, getTranslations } from "next-intl/server";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -44,9 +44,9 @@ export default async function DashboardPage({
     <div className="flex flex-col gap-8">
       <div className="flex flex-wrap items-center justify-between gap-4">
         <h1 className="cn-font-heading text-2xl font-semibold">{t("title")}</h1>
-        <Button asChild>
-          <Link href="/dashboard/new">{t("newList")}</Link>
-        </Button>
+        <Link href="/dashboard/new" className={buttonVariants()}>
+          {t("newList")}
+        </Link>
       </div>
 
       {lists.length === 0 ? (
@@ -56,9 +56,9 @@ export default async function DashboardPage({
             <CardDescription>{t("empty.description")}</CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild>
-              <Link href="/dashboard/new">{t("empty.cta")}</Link>
-            </Button>
+            <Link href="/dashboard/new" className={buttonVariants()}>
+              {t("empty.cta")}
+            </Link>
           </CardContent>
         </Card>
       ) : (
@@ -70,7 +70,7 @@ export default async function DashboardPage({
               <Card key={list.id} size="sm" className="pt-0">
                 <div
                   className={cn(
-                    "flex h-20 items-center justify-center rounded-t-4xl text-3xl",
+                    "flex h-20 items-center justify-center text-5xl",
                     list.cover_image
                       ? coverStyles[list.cover_image]
                       : "bg-muted"
@@ -89,11 +89,12 @@ export default async function DashboardPage({
                   </CardDescription>
                 </CardHeader>
                 <CardFooter className="mt-auto flex-wrap gap-2">
-                  <Button asChild size="sm">
-                    <Link href={`/dashboard/lists/${list.id}`}>
-                      {t("manage")}
-                    </Link>
-                  </Button>
+                  <Link
+                    href={`/dashboard/lists/${list.id}`}
+                    className={buttonVariants({ size: "sm" })}
+                  >
+                    {t("manage")}
+                  </Link>
                   <CopyButton
                     value={`${siteUrl}/${locale}/list/${list.public_slug}`}
                     label={t("copyLink")}

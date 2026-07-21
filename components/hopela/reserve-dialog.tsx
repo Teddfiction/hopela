@@ -37,9 +37,7 @@ export function ReserveDialog({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button size="sm">{t("cta")}</Button>
-      </DialogTrigger>
+      <DialogTrigger render={<Button size="sm" />}>{t("cta")}</DialogTrigger>
       <DialogContent>
         {state.status === "reserved" ? (
           <>

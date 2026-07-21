@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { z } from "zod";
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -70,9 +70,9 @@ export default async function CancelPage({ params }: PageProps) {
             <CardDescription>{t("invalid.description")}</CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild variant="outline">
-              <Link href="/">{t("backHome")}</Link>
-            </Button>
+            <Link href="/" className={buttonVariants({ variant: "outline" })}>
+              {t("backHome")}
+            </Link>
           </CardContent>
         </Card>
       )}

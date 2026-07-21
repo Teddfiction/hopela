@@ -20,11 +20,9 @@ export function ShareListPopover({ publicUrl }: { publicUrl: string }) {
 
   return (
     <Popover>
-      <PopoverTrigger asChild>
-        <Button variant="outline">
-          <HugeiconsIcon icon={Share01Icon} data-icon="inline-start" />
-          {t("share")}
-        </Button>
+      <PopoverTrigger render={<Button variant="outline" />}>
+        <HugeiconsIcon icon={Share01Icon} data-icon="inline-start" />
+        {t("share")}
       </PopoverTrigger>
       <PopoverContent align="start" className="w-80">
         <PopoverHeader>

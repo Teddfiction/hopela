@@ -29,10 +29,10 @@ export function LocaleSwitcher() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" aria-label={t("language")}>
-          {locale.toUpperCase()}
-        </Button>
+      <DropdownMenuTrigger
+        render={<Button variant="ghost" size="sm" aria-label={t("language")} />}
+      >
+        {locale.toUpperCase()}
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-36">
         <DropdownMenuRadioGroup value={locale} onValueChange={onLocaleChange}>

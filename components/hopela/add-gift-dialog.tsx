@@ -30,11 +30,9 @@ export function AddGiftDialog({ action }: AddGiftDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button>
-          <HugeiconsIcon icon={PlusSignIcon} data-icon="inline-start" />
-          {t("addGiftTitle")}
-        </Button>
+      <DialogTrigger render={<Button />}>
+        <HugeiconsIcon icon={PlusSignIcon} data-icon="inline-start" />
+        {t("addGiftTitle")}
       </DialogTrigger>
       <DialogContent className={dialogFullscreen}>
         <DialogHeader>

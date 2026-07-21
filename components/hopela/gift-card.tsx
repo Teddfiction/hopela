@@ -1,7 +1,7 @@
 import { getFormatter, getTranslations } from "next-intl/server";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -65,11 +65,14 @@ export async function GiftCard({ gift }: { gift: PublicGift }) {
           <ReserveDialog giftId={gift.id} giftTitle={gift.title} />
         )}
         {gift.url && (
-          <Button asChild variant="ghost" size="sm">
-            <a href={gift.url} target="_blank" rel="noopener noreferrer">
-              {t("openLink")} ↗
-            </a>
-          </Button>
+          <a
+            href={gift.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "ghost", size: "sm" })}
+          >
+            {t("openLink")} ↗
+          </a>
         )}
       </CardFooter>
     </Card>

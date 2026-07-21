@@ -87,7 +87,7 @@ export default async function PublicListPage({ params }: PageProps) {
       <Card className="pt-0">
         <div
           className={cn(
-            "flex h-32 items-center justify-center rounded-t-4xl text-5xl",
+            "flex h-32 items-center justify-center text-5xl",
             list.cover_image ? coverStyles[list.cover_image] : "bg-muted"
           )}
         >
@@ -118,7 +118,7 @@ export default async function PublicListPage({ params }: PageProps) {
           </CardHeader>
         </Card>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {visibleGifts.map((gift) => (
             <GiftCard key={gift.id} gift={gift} />
           ))}

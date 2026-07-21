@@ -5,12 +5,12 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Hopélà! design tokens — installed from theme preset b5dx8apGM (radix-luma).
+ * Hopélà! design tokens — installed from theme preset b5dx8apGM (luma, now base-luma).
  * Source of truth for all colors/typography/radii. Never hardcode values in
  * components — consume through Tailwind semantic classes. See docs/DESIGN_SYSTEM.md.
  */
 :root {
-  --background: oklch(1 0 0);
+  --background: oklch(0.985 0.001 106.423);
   --foreground: oklch(0.147 0.004 49.25);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.147 0.004 49.25);
@@ -34,7 +34,7 @@
   --chart-4: oklch(0.511 0.096 186.391);
   --chart-5: oklch(0.437 0.078 188.216);
   --radius: 0.875rem;
-  --sidebar: oklch(0.985 0.001 106.423);
+  --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.147 0.004 49.25);
   --sidebar-primary: oklch(0.681 0.162 75.834);
   --sidebar-primary-foreground: oklch(0.987 0.026 102.212);
@@ -119,7 +119,7 @@
   --radius-xl: calc(var(--radius) + 4px);
 }
 
-/* Utilities expected by the radix-luma component set */
+/* Utilities expected by the base-luma component set */
 @utility cn-font-heading {
   font-family: var(--font-heading);
 }

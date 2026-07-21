@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/dialog";
 
 interface ConfirmDialogProps {
-  trigger: React.ReactNode;
+  trigger: React.ReactElement<Record<string, unknown>>;
   title: string;
   description: string;
   confirmLabel: string;
@@ -42,7 +42,7 @@ export function ConfirmDialog({
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>{trigger}</DialogTrigger>
+      <DialogTrigger render={trigger} />
       <DialogContent>
         <DialogHeader>
           <DialogTitle>{title}</DialogTitle>

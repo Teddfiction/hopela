@@ -4,7 +4,7 @@ import { EyeIcon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { getTranslations } from "next-intl/server";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { AddGiftDialog } from "@/components/hopela/add-gift-dialog";
 import { GiftRow } from "@/components/hopela/gift-row";
 import { ListSettingsDialog } from "@/components/hopela/list-settings-dialog";
@@ -50,12 +50,13 @@ export default async function ListEditorPage({ params }: PageProps) {
       <div className="flex flex-wrap items-center gap-3">
         <AddGiftDialog action={createGift.bind(null, list.id)} />
         <ShareListPopover publicUrl={publicUrl} />
-        <Button asChild variant="outline">
-          <Link href={`/list/${list.public_slug}`}>
-            <HugeiconsIcon icon={EyeIcon} data-icon="inline-start" />
-            {t("viewPublic")}
-          </Link>
-        </Button>
+        <Link
+          href={`/list/${list.public_slug}`}
+          className={buttonVariants({ variant: "outline" })}
+        >
+          <HugeiconsIcon icon={EyeIcon} data-icon="inline-start" />
+          {t("viewPublic")}
+        </Link>
         <ListSettingsDialog
           action={updateList.bind(null, list.id)}
           list={list}

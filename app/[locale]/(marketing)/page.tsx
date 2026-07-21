@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -27,12 +27,15 @@ export default async function HomePage() {
           {t("hero.subtitle")}
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3">
-          <Button asChild size="lg">
-            <Link href="/login">{t("hero.cta")}</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <Link href="#how-it-works">{t("hero.secondaryCta")}</Link>
-          </Button>
+          <Link href="/login" className={buttonVariants({ size: "lg" })}>
+            {t("hero.cta")}
+          </Link>
+          <Link
+            href="#how-it-works"
+            className={buttonVariants({ size: "lg", variant: "outline" })}
+          >
+            {t("hero.secondaryCta")}
+          </Link>
         </div>
       </section>
 
@@ -62,9 +65,9 @@ export default async function HomePage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <Button asChild>
-              <Link href="/login">{t("antiSpoil.cta")}</Link>
-            </Button>
+            <Link href="/login" className={buttonVariants()}>
+              {t("antiSpoil.cta")}
+            </Link>
           </CardContent>
         </Card>
       </section>

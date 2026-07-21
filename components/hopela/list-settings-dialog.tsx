@@ -34,11 +34,9 @@ export function ListSettingsDialog({ action, list }: ListSettingsDialogProps) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <Button variant="outline" size="icon">
-          <HugeiconsIcon icon={Settings01Icon} />
-          <span className="sr-only">{t("settingsTitle")}</span>
-        </Button>
+      <DialogTrigger render={<Button variant="outline" size="icon" />}>
+        <HugeiconsIcon icon={Settings01Icon} />
+        <span className="sr-only">{t("settingsTitle")}</span>
       </DialogTrigger>
       <DialogContent className={dialogFullscreen}>
         <DialogHeader>

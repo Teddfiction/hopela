@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -43,9 +43,9 @@ export default async function CancelResultPage({ searchParams }: PageProps) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <Button asChild variant="outline">
-            <Link href="/">{t("backHome")}</Link>
-          </Button>
+          <Link href="/" className={buttonVariants({ variant: "outline" })}>
+            {t("backHome")}
+          </Link>
         </CardContent>
       </Card>
     </div>

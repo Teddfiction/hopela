@@ -70,11 +70,9 @@ export function GiftRow({ gift }: { gift: Gift }) {
 
         <div className="ml-auto flex shrink-0 items-center gap-2">
           <Dialog open={editOpen} onOpenChange={setEditOpen}>
-            <DialogTrigger asChild>
-              <Button variant="outline" size="icon-sm">
-                <HugeiconsIcon icon={Edit02Icon} />
-                <span className="sr-only">{t("edit")}</span>
-              </Button>
+            <DialogTrigger render={<Button variant="outline" size="icon-sm" />}>
+              <HugeiconsIcon icon={Edit02Icon} />
+              <span className="sr-only">{t("edit")}</span>
             </DialogTrigger>
             <DialogContent className="max-h-[85dvh] overflow-y-auto sm:max-w-lg">
               <DialogHeader>

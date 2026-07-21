@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { LocaleSwitcher } from "@/components/hopela/locale-switcher";
 import { createClient } from "@/lib/db/server";
 import { Link } from "@/lib/i18n/navigation";
@@ -25,13 +25,16 @@ export async function SiteHeader() {
         <div className="flex items-center gap-2">
           <LocaleSwitcher />
           {user ? (
-            <Button asChild size="sm">
-              <Link href="/dashboard">{t("dashboard")}</Link>
-            </Button>
+            <Link
+              href="/dashboard"
+              className={buttonVariants({ size: "sm" })}
+            >
+              {t("dashboard")}
+            </Link>
           ) : (
-            <Button asChild size="sm">
-              <Link href="/login">{t("login")}</Link>
-            </Button>
+            <Link href="/login" className={buttonVariants({ size: "sm" })}>
+              {t("login")}
+            </Link>
           )}
         </div>
       </div>
