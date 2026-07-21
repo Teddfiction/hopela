@@ -6,11 +6,7 @@ import {
   SidebarTrigger,
 } from "@/components/ui/sidebar";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import {
-  DashboardSidebar,
-  type SidebarListItem,
-} from "@/components/hopela/dashboard-sidebar";
-import { getMyLists } from "@/lib/core/lists/queries";
+import { DashboardSidebar } from "@/components/hopela/dashboard-sidebar";
 import { Link, redirect } from "@/lib/i18n/navigation";
 import { createClient } from "@/lib/db/server";
 
@@ -33,18 +29,10 @@ export default async function DashboardLayout({
     redirect({ href: "/login", locale });
   }
 
-  const lists = await getMyLists();
-  const sidebarLists: SidebarListItem[] = lists.map((list) => ({
-    id: list.id,
-    title: list.title,
-    emoji: list.emoji,
-    giftCount: list.gift[0]?.count ?? 0,
-  }));
-
   return (
     <TooltipProvider>
       <SidebarProvider>
-        <DashboardSidebar email={user!.email ?? ""} lists={sidebarLists} />
+        <DashboardSidebar email={user!.email ?? ""} />
         <SidebarInset>
           <header className="sticky top-0 z-40 flex h-14 items-center gap-2 border-b bg-background/80 px-4 backdrop-blur-sm md:hidden">
             <SidebarTrigger />
@@ -55,6 +43,9 @@ export default async function DashboardLayout({
               {t("brand")}
             </Link>
           </header>
+          <div className="hidden px-4 pt-3 md:block">
+            <SidebarTrigger className="-ml-1" />
+          </div>
           <div className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
             {children}
           </div>

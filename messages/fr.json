@@ -64,7 +64,7 @@
     "account": "Compte",
     "signOut": "Se déconnecter",
     "manage": "Gérer",
-    "copyLink": "Copier le lien",
+    "copyLink": "Partager",
     "spoilOff": "anti-spoil désactivé",
     "giftsCount": "{count, plural, =0 {Aucun cadeau} one {# cadeau} other {# cadeaux}}",
     "empty": {

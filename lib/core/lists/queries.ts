@@ -47,7 +47,7 @@ export async function getOwnedList(
     .select("*")
     .eq("list_id", listId)
     .order("position", { ascending: true, nullsFirst: false })
-    .order("created_at", { ascending: true });
+    .order("created_at", { ascending: false });
 
   return { list: list as List, gifts: (gifts as Gift[] | null) ?? [] };
 }
@@ -72,7 +72,7 @@ export async function getPublicList(
     .select("*")
     .eq("list_id", list.id)
     .order("position", { ascending: true, nullsFirst: false })
-    .order("created_at", { ascending: true });
+    .order("created_at", { ascending: false });
 
   return { list: list as List, gifts: (gifts as Gift[] | null) ?? [] };
 }
